@@ -34,6 +34,6 @@ function sendMail(semail, password, remail, sub, msg, crons) {
             }    
         })
     });
-    return "run";
+    return "http://localhost/qit";
 
 }
