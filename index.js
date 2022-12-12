@@ -12,7 +12,7 @@ app.get('/sendmail', (req, res) => {
     };
     const childProcess = fork('./sendmail.js');
     childProcess.send({ "semail": response1.semail, "password": response1.password, "remail": response1.remail, "sub": response1.subject, "msg": response1.message, "crons": response1.crons })
-    childProcess.on("message", message => res.send(message));
+    childProcess.on("message", message => res.redirect(message));
 
 });
 app.listen(PORT, () => console.log("Listening on 8081"))
